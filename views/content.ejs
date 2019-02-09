@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Content Creation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/content.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="icon" href="/Images/logo.png">
+</head>
+
+<body style="background-color: gray;">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-2 col-sm-1 col-0"></div>
+            <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-12">
+                <center>
+                    <button type="button" class="btn btn-dark format mt-2 ml-0" id="story" onclick="change(this.id);">Story</button>
+                    <button type="button" class="btn btn-dark format mt-2 ml-0 ml-sm-1" id="poem" onclick="change(this.id);">Poem</button>
+                    <button type="button" class="btn btn-dark format mt-2 ml-0 ml-sm-1" id="blog" onclick="change(this.id);">Blog</button>
+                    <button type="button" class="btn btn-dark format mt-2 ml-0 ml-sm-1" id="experience" onclick="change(this.id);">Scribbled
+                        Experience</button>
+                </center>
+                <form class="mt-3">
+                    <div class="form-group mb-0">
+                        <input type="text" id="title" class="form-control" placeholder="Title">
+                    </div>
+                    <div class="row">
+                        <div class="col-12 p-0" style="background-image: linear-gradient(to right, gray, white, gray);">
+                            <center>
+                                <img class="feature  ml-0" width="30" height="-2" src="/Images/Bold.png" onclick="event.preventDefault(); document.execCommand('bold',false,null);"
+                                    title="Bold Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/Italic.png"
+                                    onclick="event.preventDefault(); document.execCommand('italic',false,null);" 
+                                    title="Italicize Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/l-align.png"
+                                    onclick="event.preventDefault(); document.execCommand('justifyLeft',false,null);"
+                                    title="Left ALign Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/r-align.png"
+                                    onclick="event.preventDefault(); document.execCommand('justifyRight',false,null);"
+                                    title="Right Align Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/Justify.png"
+                                    onclick="event.preventDefault(); document.execCommand('justifyFull',false,null);"
+                                    title="Justify Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/l-indent.png"
+                                    onclick="event.preventDefault(); document.execCommand('indent',false,null);" 
+                                    title="Indent Highlighted Text"></button>
+
+                                <img class="feature ml-xl-5 ml-sm-3" width="29" height="35" src="/Images/r-indent.png"
+                                    onclick="event.preventDefault(); document.execCommand('outdent',false,null);" 
+                                    title="Outdent Highlighted Text"></button>
+                            </center>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="textPlacer form-control" id="content-body" contenteditable="true"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="tags" class="form-control" placeholder="tags">
+                    </div>
+                </form>
+                <button class="mb-3" id="next" onmouseover="document.getElementById('arrow').style.display = 'inline' "
+                    onmouseout="document.getElementById('arrow').style.display = 'none' ">
+                    <p style="display: inline;">Next</p>
+                    <p class="ml-2" style="display: none" id="arrow">&rarr;</p>
+                </button>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-2 col-sm-1 col-0"></div>
+        </div>
+    </div>
+    <script>
+        var types = document.getElementsByClassName('format');
+
+        function change(e) {
+            for (var i = 0; i < types.length; ++i) {
+                types.item(i).style.backgroundColor = '#343a40';
+            }
+
+            document.getElementById(e).style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+
+</html>

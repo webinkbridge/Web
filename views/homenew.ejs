@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>InkBridge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/Images/logo.png">
+  <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/homenew.css">
+  <link href="https://fonts.googleapis.com/css?family=Arizonia" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amarante" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pathway+Gothic+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+  <style>
+    .example-open .modal-backdrop {
+      background-color: rgba(0,0,0,0.8);
+      }
+    
+  </style>
+</head>
+
+<body>
+
+  <!--Navbar-->
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" id="brand" href="#">
+      <img src="/Images/logo.png" width="50" height="50" class="d-inline-block align-top" alt="">
+    </a>
+    <form class="form-inline">
+      <input class="form-control" type="text" id="searchfield" placeholder="Search">
+      <button class="btn btn-dark" id="searchbutton" type="submit"><i class="fas fa-search" style="color:black;"></i></button>
+    </form>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+      aria-expanded="false" aria-label="Toggle navigation" id="togglerbutton">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="navbar-brand" href="#" id="welcome">
+            <p id="navname">Raied Razi</p>
+            <img src="/Images/cardicon.png" width="40" height="40" class="d-inline-block align-top" alt="">
+          </a>
+          <a><img src="/Images/Quill.png" class="navicons">
+            <p style="display: inline; color: white;">:</p>
+            <p class="qnltext">10</p>
+          </a>
+          <a><img src="/Images/Pen.png" class="navicons">
+            <p style="display: inline; color: white;">:</p>
+            <p class="qnltext">2</p>
+          </a>
+          <a><img src="/Images/Level.png" class="navicons">
+            <p style="display: inline; color: white;">:</p>
+            <p class="qnltext">2</p>
+          </a>
+          <a class="nav-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg" id="notifbell">
+            <img src="/Images/Bell.png" class="navicons" id="bellicon">
+            <span id="unreadnotif" style="display: inline-block; background-color:black; border-radius: 10px; height: 18px; min-width: 10.7px;"><span>
+                <p id="unreadnotiftext" style="font-weight: 500; text-align: center; padding-left: 4px; padding-right:4px; color: white; font-size: 11px;">12</p>
+              </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!--End Navbar-->
+
+  <!--Landing page-->
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-3" style="background: #ECF0F1;" id="left">
+        <!--Start left part-->
+        <div id="insideleft">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia non nulla maxime optio blanditiis voluptas
+          unde, explicabo dicta voluptate autem repudiandae itaque voluptatum provident sit perferendis modi enim quo
+          aliquam.
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi voluptates quo, commodi delectus labore quis
+          fugiat dolor et architecto odio, placeat explicabo facere harum suscipit cum magnam, nesciunt laborum
+          molestias?Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet placeat blanditiis ex quasi. Nobis
+          odit eum similique deserunt quia magnam quis porro nulla fugit debitis, repellendus ducimus suscipit, alias
+          saepe!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, est officiis. Mollitia ad sit repellat sint
+          commodi suscipit animi, iure non debitis eum, repudiandae unde veniam eaque deserunt, odit ipsa!Loremlor
+        </div>
+        <!--End left part-->
+      </div>
+      <div class="col-6" id="center">
+
+        <!--Start center page-->
+
+        <!---Add content button starts-->
+        <button class="btn btn-primary addcnt" data-toggle="modal" data-target="#myModal"><i class="fa fa-feather"></i></button>
+        <div class="containeraddcnt">
+
+          <!-- The Modal -->
+          <div class="modal fade" id="myModal">
+            <div class="modal-dialog modal-dialog-centered contcreation">
+              <div class="modal-content contentcreation">
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <div class="row" style="padding-top:5px; padding-bottom:5px;">
+                    <button class="btn btn-danger wtUpBox">Poetry</button>
+                    <button class="btn btn-danger wtUpBox">Stories</button>
+                    <button class="btn btn-danger wtUpBox">Blogs</button>
+                  </div>
+                  <div class="row" style="padding-top:5px; padding-bottom:5px;">
+                    <button class="btn btn-danger wtUpBox">Shayaris</button>
+                    <button class="btn btn-danger wtUpBox">Haikus</button>
+                    <button class="btn btn-danger wtUpBox">Essays</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card mb-3" id="stories" style="margin-top: 0">
+          <div class="card-head">
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p1.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
+          </div>
+          <img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="up-section">
+              <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+            </div>
+            <div class="bottom-section">
+              <span class="counter" id="likes"><a href="">22</a> likes</span><br>
+              <span class="usercoment"><a href="">Username</a> welcome to my first quote</span>
+              <div class="public-coment">
+                <span class="morecoment"><a href="">Load More Comment</a></span><br>
+                <span class="usercoment"><a href="">Public-Username1 </a>ashbbbbbbbbbbbbbbddfj</span><br>
+                <span class="usercoment"><a href="">Public-Username2</a> bbbbbbbbbbbbbbbbbbbb</span><br>
+              </div>
+              <div class="time">
+                <span class="timeadd">9 hours ago</span>
+              </div>
+              <hr>
+              <div class="addcoment" style="display:none;" id="commentPortion">
+                <div class="md-form">
+                  <form method="post">
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3" id="stories">
+          <div class="card-head">
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p2.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
+          </div>
+          <img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="up-section">
+              <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+            </div>
+            <div class="bottom-section">
+              <span class="counter" id="likes"><a href="">22</a> likes</span><br>
+              <span class="usercoment"><a href="">Username</a> welcome to my first quote</span>
+              <div class="public-coment">
+                <span class="morecoment"><a href="">Load More Comment</a></span><br>
+                <span class="usercoment"><a href="">Public-Username1 </a>ashbbbbbbbbbbbbbbddfj</span><br>
+                <span class="usercoment"><a href="">Public-Username2</a> bbbbbbbbbbbbbbbbbbbb</span><br>
+              </div>
+              <div class="time">
+                <span class="timeadd">9 hours ago</span>
+              </div>
+              <hr>
+              <div class="addcoment" style="display:none;" id="commentPortion">
+                <div class="md-form">
+                  <form method="post">
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-3" id="stories">
+          <div class="card-head">
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p3.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
+          </div>
+          <img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="up-section">
+              <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+            </div>
+            <div class="bottom-section">
+              <span class="counter" id="likes"><a href="">22</a> likes</span><br>
+              <span class="usercoment"><a href="">Username</a> welcome to my first quote</span>
+              <div class="public-coment">
+                <span class="morecoment"><a href="">Load More Comment</a></span><br>
+                <span class="usercoment"><a href="">Public-Username1 </a>ashbbbbbbbbbbbbbbddfj</span><br>
+                <span class="usercoment"><a href="">Public-Username2</a> bbbbbbbbbbbbbbbbbbbb</span><br>
+              </div>
+              <div class="time">
+                <span class="timeadd">9 hours ago</span>
+              </div>
+              <hr>
+              <div class="addcoment" style="display:none;" id="commentPortion">
+                <div class="md-form">
+                  <form method="post">
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Start follow-->
+
+        <div class="container" id="show-suggestions">
+          <pre>People you may know</pre>
+          <section id="cards">
+            <div id="card--content" style="margin-left: 0;">
+              <a><img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p5.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p1.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p2.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p3.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+            <div id="card--content">
+              <a><img class="card-img-top img-responsive" src="/Images/p5.jpg" alt="Card image cap"></a>
+              <div class="card-body">
+                <h6 class="card-title" id="username">Username</h6>
+                <p>From Bhubaneswar</p>
+                <a href="#" class="btn btn-circle btn-lg"><i class="fas fa-user-plus"></i></a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!--End follow-->
+
+        <div class="card mb-3" id="stories">
+          <div class="card-head">
+            <a class="btn-floating btn-lg btn-tw"><img src="/Images/p4.jpg" class="img-responsive"></a>
+            <a class="btn-floating btn-lg btn-fb" id="username">Username</a>
+          </div>
+          <img class="card-img-top img-responsive" src="/Images/p4.jpg" alt="Card image cap">
+          <div class="card-body">
+            <div class="up-section">
+              <a class="btn-floating btn-lg btn-tw" id="like"><i class="fas fa-heart like disliked"></i></a>
+              <a class="btn-floating btn-lg btn-tw" id="comment"><i class="far fa-comment"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="share"><i class="far fa-paper-plane"></i></a>&nbsp;
+              <a class="btn-floating btn-lg btn-tw" id="bookmark"><i class="fas fa-bookmark like disliked"></i></a><br>
+            </div>
+            <div class="bottom-section">
+              <span class="counter" id="likes"><a href="">22</a> likes</span><br>
+              <span class="usercoment"><a href="">Username</a> welcome to my first quote</span>
+              <div class="public-coment">
+                <span class="morecoment"><a href="">Load More Comment</a></span><br>
+                <span class="usercoment"><a href="">Public-Username1 </a>ashbbbbbbbbbbbbbbddfj</span><br>
+                <span class="usercoment"><a href="">Public-Username2</a> bbbbbbbbbbbbbbbbbbbb</span><br>
+              </div>
+              <div class="time">
+                <span class="timeadd">9 hours ago</span>
+              </div>
+              <hr>
+              <div class="addcoment" style="display:none;" id="commentPortion">
+                <div class="md-form">
+                  <form method="post">
+                    <textarea type="text" id="commentArea" class="md-textarea " placeholder="Add Comments...." rows="1"></textarea>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--End center page-->
+
+      <!--Small Screen Notifaction Modal Starts-->
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" style="overflow-y: scroll; max-height:85%;  margin-top: 50px; margin-bottom:50px;">
+          <div class="modal-content">
+
+            <div class="modal-header text-center">
+              <h4 class="notification-title">Notifications</h4>
+            </div>
+
+            <div class="modal-body">
+              <div class="notification-body">
+                <div class="notifications">
+                  <ul class="notification-list">
+
+
+                    <!---NOTIFICATION 1 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 2 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/hearticon.png" class="media-object cat-icon rounded-circle" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and 4 others Like your Post.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 3 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/commenticon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> commented on your
+                            post.</p>
+                        </div>
+                      </div>
+                    </li>
+                    <!---NOTIFICATION 4 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                        </div>
+                      </div>
+                    </li>
+
+                    <!---NOTIFICATION 5 SMALL SCREEN MODAL-->
+
+                    <li>
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img src="/Images/shareicon.png" class="media-object cat-icon rounded" alt="...">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <ul class="n-user-list">
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                            <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                          </ul>
+                          <p class="media-heading"><b>Abhinandan Purkait</b> shared your post.</p>
+                        </div>
+                      </div>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">InkBridge</div>
+          </div>
+        </div>
+      </div>
+
+      <!--Small Screen Notifaction Modal Ends-->
+
+      <!---Right Part Starts-->
+
+      <div class="col-lg-3 col-md-6 col-sm-6" style="background:#ECF0F1;" id="right">
+        <div class="page-header text-center">
+          <h4 class="notification-title">Notifications</h4>
+        </div>
+        <div class="notification-body">
+          <div class="notifications">
+            <ul class="notification-list">
+
+              <!---NOTIFICATION 1 LARGE SCREEN-->
+
+              <li>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="n-user-list">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!---NOTIFICATION 2 LARGE SCREEN-->
+
+              <li>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="/Images/hearticon.png" class="media-object cat-icon rounded-circle" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="n-user-list">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading"><b>Abhinandan Purkait</b> and 4 others Like your Post.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!---NOTIFICATION 3 LARGE SCREEN-->
+
+              <li>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="/Images/commenticon.png" class="media-object cat-icon rounded" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="n-user-list">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> commented on your post.</p>
+                  </div>
+                </div>
+              </li>
+              <!---NOTIFICATION 4 LARGE SCREEN-->
+
+              <li>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="/Images/usericon.png" class="media-object cat-icon rounded" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="n-user-list">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading"><b>Abhinandan Purkait</b> and <b>Raeid Razi</b> followed you.</p>
+                  </div>
+                </div>
+              </li>
+
+              <!---NOTIFICATION 5 LARGE SCREEN-->
+
+              <li>
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <img src="/Images/shareicon.png" class="media-object cat-icon rounded" alt="...">
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="n-user-list">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading"><b>Abhinandan Purkait</b> shared your post.</p>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!---CONSIGNMENT LARGE SCREEN STARTS-->
+        <div class="page-header text-center">
+          <h4 class="consignment-title">Consignments</h4>
+        </div>
+        <div class="consignment-body">
+          <div class="consignment">
+            <ul class="consignment-list">
+              <li id="consign1">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <i class="far fa-sticky-note"></i>
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="user">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading">Consignment recieved from <b>Abhinandan Purkait</b></p>
+                    <button class="accept">Accept</button>
+                    <button class="ignore" onclick="remove(1);">Ignore</button>
+                  </div>
+                </div>
+              </li>
+              <li id="consign2">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <i class="far fa-sticky-note"></i>
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="user">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading">Consignment recieved from <b>Neelanjan</b></p>
+                    <button class="accept">Accept</button>
+                    <button class="ignore" onclick="remove(2);">Ignore</button>
+                  </div>
+                </div>
+              </li>
+              <li id="consign3">
+                <div class="media">
+                  <div class="media-left">
+                    <a href="#">
+                      <i class="far fa-sticky-note"></i>
+                    </a>
+                  </div>
+                  <div class="media-body">
+                    <ul class="user">
+                      <li><a href="#"><img src="/Images/cardicon.png" class="avatar rounded" alt="..."></a></li>
+                    </ul>
+                    <p class="media-heading">Consignment recieved from <b>Raied Khan</b></p>
+                    <button class="accept">Accept</button>
+                    <button class="ignore" onclick="remove(3);">Ignore</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!---CONSIGNMENT LARGE SCREEN ENDS-->
+      </div>
+
+      <!---Right Part Ends-->
+
+    </div>
+  </div>
+
+  <!--End Landing page-->
+
+</body>
+
+<!--Script Starts-->
+
+<script src="/js/homenew.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/Bootstrap/js/bootstrap.bundle.js"></script>
+
+<script>
+  $(".fa-heart").click(function () {
+    console.log("dd");
+    $(this).toggleClass("liked disliked");
+  });
+
+  $(".fa-bookmark").click(function () {
+    console.log("dd");
+    $(this).toggleClass("like disliked");
+  });
+
+  $('#myModal').on('show.bs.modal', function (e) {
+    $('body').addClass("example-open");
+  }).on('hide.bs.modal', function (e) {
+    $('body').removeClass("example-open");
+  })
+</script>
+
+<!--Script Ends-->
+
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>InkBridge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="public/Images/logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="public/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+        crossorigin="anonymous">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+</head>
+
+<body>
+    <div class="LogoAndQuotes col-lg-4 col-md-4 col-sm-12 col-xs-12" id="LogoAndQuotes">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                <center>
+                    <img src="public/Images/logo.png" class="img-responsive" id="logo"><br>
+                </center>
+            </div>
+        </div>
+        <center>
+            <div class="quotes">
+                <i>Sometime we can feel a bit dull in the morning and we need to produce our own sunshine energy.</i><br><br>
+                <i>When you’re playing small and want to break out of your current limitations…</i><br><br>
+                <div id="extraquotes" style="display: none">
+                    <i>Sometime we can feel a bit dull in the morning and we need to produce our own sunshine energy.</i><br><br>
+                    <i>When you’re playing small and want to break out of your current limitations…</i><br><br>
+                    <i>When you’re playing small and want to break out of your current limitations…</i><br><br>
+                    <i>Sometime we can feel a bit dull in the morning and we need to produce our own sunshine energy.</i><br><br>
+                    <i>When you’re playing small and want to break out of your current limitations…</i><br><br>
+                    <i>Sometime we can feel a bit dull in the morning and we need to produce our own sunshine energy.</i><br><br>
+                </div>
+
+            </div>
+        </center>
+    </div>
+    </center>
+    </div>
+    <div class="right col-lg-8 col-md-8 col-sm-12 col-xs-12" id="right">
+        <form method="post" onsubmit="return check();">
+            <h2 class="row text-center">Create an Account</h2>
+            <div class="form-row">
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-5">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="fullname" placeholder="Fullname" required="" name="fullname" oninput="fillcheck();">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 py-5">
+                    <i class="fas fa-pen"></i>
+                    <input type="text" name="pen" placeholder="Penname" id="penname" required="" oninput="fillcheck();">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$]"
+                        required="" placeholder="Email" oninvalid="this.setCustomValidity('Please Enter Valid Email')"
+                        oninput="fillcheck();">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <i class="fa fa-unlock" aria-hidden="true"></i>
+                    <input type="password" name="pass" placeholder="Password" id="password" required="" oninput="fillcheck();">
+                </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <i class="fa fa-unlock" aria-hidden="true"></i>
+                    <input type="password" name="confpass" placeholder="Re-Enter Password" id="password1" required=""
+                        oninput="fillcheck();">
+                </div>
+                <div class="form-group col-lg-4 col-md-8 col-sm-4 col-xs-4 text-center"></div>
+                <div class="form-group col-lg-4 col-md-4 col-sm-4 col-xs-4 text-center">
+                    <input type="button" id="next" value="Next" onclick="showafter();alterflag();" />
+                </div>
+                <div class="form-group col-lg-4 col-md-8 col-sm-6 col-xs-6 text-center"></div>
+                <div id="after" style="display: none;">
+                    <div class="form-check col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        What are the type of writeups you want read ?<br>
+                        <input class="form-check-input" type="checkbox" value="" id="poetry">
+                        <label class="form-check-label" for="poetry">
+                            Poetry
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="stories">
+                        <label class="form-check-label" for="stories">
+                            Short Stories
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="novellas">
+                        <label class="form-check-label" for="novellas">
+                            Novellas
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="shayaries">
+                        <label class="form-check-label" for="shayaries">
+                            Shayaries
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="hakus">
+                        <label class="form-check-label" for="haikus">
+                            Haikus
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="blogs">
+                        <label class="form-check-label" for="blogs">
+                            Blogs
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="articles">
+                        <label class="form-check-label" for="articles">
+                            Articles
+                        </label><br>
+                    </div>
+                    <div class="form-check col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <br>Languages Prefences:<br>
+                        <input class="form-check-input" type="checkbox" value="" id="lang-hindi">
+                        <label class="form-check-label" for="lang-hindi">
+                            Hindi
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="lang-eng">
+                        <label class="form-check-label" for="lang-eng">
+                            English
+                        </label><br>
+                        <input class="form-check-input" type="checkbox" value="" id="regoption" onchange="enabler();activateblockregional();">
+                        <label class="form-check-label" for="lang-reg">
+                            Regional
+                        </label><br>
+                        <ul id="reglang">
+                            <li><label><input type="checkbox" class="regsubOption" id="1" disabled>Odia</label></li>
+                            <li><label><input type="checkbox" class="regsubOption" id="2" disabled>Bengali</label></li>
+                            <li><label><input type="checkbox" class="regsubOption" id="3" disabled>Urdu</label></li>
+                            <li><label><input type="checkbox" class="regsubOption" id="4" disabled>Marathi</label></li>
+                            <li><label><input type="checkbox" class="regsubOption" id="5" disabled>Tamil</label></li>
+                        </ul>
+                        <input class="form-check-input" type="checkbox" value="" id="intoption" onchange="enabler1();activateblockinternational();">
+                        <label class="form-check-label" for="lang-int">
+                            International
+                        </label><br>
+                        <ul id="intlang">
+                            <li><label><input type="checkbox" class="intsubOption" id="lang1" disabled>French</label></li>
+                            <li><label><input type="checkbox" class="intsubOption" id="lang2" disabled>Italian</label></li>
+                            <li><label><input type="checkbox" class="intsubOption" id="lang3" disabled>Portugese</label></li>
+                            <li><label><input type="checkbox" class="intsubOption" id="lang4" disabled>German</label></li>
+                            <li><label><input type="checkbox" class="intsubOption" id="lang5" disabled>Nepali</label></li>
+                        </ul>
+                    </div>
+                    <div class="form-row" id="genrearea">
+                        <label for="genre">Enter the genre you want to read(with a # eg: #crime)</label>
+                        <br>
+                        <input type="text" value="" data-role="tagsinput" name="genretags" class="genrebox">
+                        <!---table>
+                                <tr id="frstrw">
+                                    <td id="frstcl">
+                                        <input type="text" name="genre" id="genre">
+                                    </td>
+                                    <td>
+                                        <a name="add" id="add" onclick="addgenre();" class="btn btn-danger"><i class="fa fa-plus"></i></a>
+                                    </td>
+                                </tr>
+                            </table--->
+                    </div>
+                    <div class="form-check col-lg-12 col-md-12 col-sm-12 col-xs-12" id="termsandcon">
+                        <input class="form-check-input" type="checkbox" id="terms" required="">
+                        <label class="form-check-label" for="terms">
+                            <a href="" target="_blank">I agree to the Terms and Conditions</a>
+                        </label>
+                    </div>
+                    <br>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                        <input type="submit" id="submit" value="Submit" />
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="public/js/main.js"></script>
+</body>
+
+</html>

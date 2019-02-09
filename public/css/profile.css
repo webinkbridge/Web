@@ -1,0 +1,189 @@
+/*Universal Css Starts*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background:#ECF0F1;
+}
+
+.prof_page
+{
+	margin-left: 14%;
+	margin-right: 14%;
+	margin-top:5%;
+}
+
+#prof_img
+{
+	height: 12vw;
+	width: 12vw;
+	border-radius: 50%;
+}
+
+#prof_stat
+{
+	margin-left: 5vw;
+}
+
+#prof_stat #top
+{
+	font-size: 1.5vw;
+}
+
+#prof_stat #bottom
+{
+	margin-top: 1.5vw;
+	font-size: 2vw;
+}
+#pens,#quils{
+	width:5%;
+}
+#usr_name
+{
+	font-weight: 300;
+	font-size: 28px;
+}
+
+#flws,#flwng,#pens
+{
+	padding-right: 2vw;
+}
+
+#usr_flws,#usr_flwng,#usr_artc,#usr_pens,#usr_quils
+{
+	font-weight: bold;
+}
+
+#tabs
+{
+	font-weight: bold;
+}
+#tabs a
+{
+	font-size: 2vw;
+	color: #7B7D7D ;
+	cursor: pointer;
+}
+.container-fluid
+{
+	margin-bottom: 5vw;
+}
+.container-fluid .row
+{
+	margin-top: 2vw;
+}
+.container-fluid .card
+{
+	font-size: 1.4vw;
+	color: white;
+	background:#ECF0F1; 
+	border: none;
+	float: left;
+}
+.card-img-top {
+    width: 100%;
+    height: 22vw;
+	object-fit: cover;
+}
+
+
+.content {
+	cursor: pointer;
+	position: relative;
+	max-width: 400px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.content .content-overlay {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+.content:hover .content-overlay {
+	opacity: 1;
+}
+
+
+.content-details {
+	position: absolute;
+	text-align: center;
+	padding-left: 1em;
+	padding-right: 1em;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	opacity: 0;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	-moz-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+.content-details p
+{
+	display:inline;
+}
+.content:hover .content-details {
+	top: 50%;
+	left: 50%;
+	opacity: 1;
+}
+
+.fadeIn-bottom {
+	top: 80%;
+}
+
+/*Universal Css Ends*/
+
+
+/*Desktop View Starts*/
+
+@media only screen and (min-width: 992px) 
+{
+	.card{
+		width:33.33%;
+		padding: 5px;
+	}
+	.row{
+		margin-top: 0px;
+	}
+}
+
+/*Desktop View Ends*/
+
+/*Mobile View Starts*/
+
+@media only screen and (max-width: 992px) 
+{
+	.card{
+		width:33.33%;
+		padding: 2px;
+	}
+	.row{
+		margin-top: 0px;
+	}
+
+	#news_btn{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+/*Mobile View Ends*/
+

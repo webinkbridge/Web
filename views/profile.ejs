@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>InkBridge</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/Images/logo.png">
+  <link rel="stylesheet" type="text/css" href="/Bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/css/profile.css">
+  <link href="https://fonts.googleapis.com/css?family=Amarante" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+</head>
+
+<body >
+  <section class="prof_page">
+
+  <!-- Profile Starts -->
+    <div class="row" id="prof_det">
+      <div class="col-2">
+        <img src="/Images/cardicon.png" id="prof_img">
+      </div>
+      <div class="col-6" id="prof_stat">
+        <h1 id="usr_name">raiedkhan</h1>
+        <div id="top">
+          <span id="flws"><span id="usr_flws">999 </span>Followers</span>
+          <span id="flwng"><span id="usr_flwng">999 </span>Following</span>
+          <span id="artc"><span id="usr_artc">100 </span>Articles</span><br>
+        </div>
+        <div id="bottom">
+          <span id="pens" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span id="usr_pens">100 </span><img class="img-fluid" style="width: 4vw;" src="/Images/pen.png"></span>
+          <span id="quils" style="background-color: rgba(0, 0, 0, 0.452); padding: 0.8vw; border-radius: 22px; color: rgb(219, 219, 219);"><span id="usr_quils">100 </span><img class="img-fluid" style="width: 4vw;" src="/Images/Quill.png"></span>
+        </div>
+      </div>
+    </div>
+  <!-- Profile Ends -->
+    <hr>
+  <!-- Options Starts -->  
+    
+    <div class="row" id="tabs">
+      <div class="col text-center"><a class="btn-floating btn-lg" id="news_btn" onclick="Switch(1,this.id);">NEWS-FEED</a></div>  
+      <div class="col text-center" style="padding-right: 0px;padding-left: 0px;"><a class="btn-floating btn-lg" id="post_btn" onclick="Switch(2,this.id);">POSTS</a></div>
+      <div class="col text-center"><a class="btn-floating btn-lg" id="draft_btn" onclick="Switch(3,this.id);">DRAFTS <i class="fas fa-pen-square"></i></a></div>  
+    </div>
+
+  <!-- Options Ends -->
+
+  <!-- Content Starts -->
+    <!-- NEWS FEED Starts -->  
+      <div class="container-fluid" id="news_feed">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-2  card" >
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p1.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p2.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p3.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4  card" >
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p4.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p1.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p4.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    <!-- NEWS FEED Ends -->  
+
+    <!-- Posts Starts -->  
+      <div class="container-fluid" id="posts" style="display: none;">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-2  card" >
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p4.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p3.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p2.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4  card" >
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p1.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Posts Ends -->  
+
+    <!-- Draft Starts -->  
+      <div class="container-fluid" id="drafts" style="display: none;">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-sm-2  card" >
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p2.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 card">
+            <div class="content">
+              <div class="content-overlay"></div>
+                <img src="/Images/p1.jpg" class="content-image card-img-top img-fluid" alt="...">
+                <div class="content-details fadeIn-bottom">
+                  <p>#love #crime #drama #thriller #real #wanderlust #food #heartbreak</p>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Draft Ends -->  
+
+  <!-- Content Ends -->
+
+
+  </section>
+</body>
+
+<!--Script Starts-->
+
+<script src="/js/profile.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/Bootstrap/js/bootstrap.bundle.js"></script>
+
+<!--Script Ends-->
+
+</html>

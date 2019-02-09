@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/Images/logo.png">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/Login.css" />
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <center>
+                            <img src="/Images/logo.png" width="200" height="200" class="img-fluid" id="logo">
+                        </center>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-none d-sm-block" id="Quotes">
+                        <center>
+                            <p><i>“Create the highest, grandest vision possible for your life, because you become what you believe”</i></p><br>
+                            <p><i>“When you can’t find the sunshine, be the sunshine”</i></p><br>
+                            <p><i>“The grass is greener where you water it”</i></p><br>
+                            <p><i>"Wherever life plants you, bloom with grace”</i></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-12">
+                <center>
+                    <div id="content">
+                        <br><br>
+                        <form method="post">
+                            <h1>Login</h1>
+                            <br><br>
+                            <fieldset>   
+                                <input type="text" placeholder="Email or Username" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email or Username'" class="theinput" id="emailorun" required>
+                                <br><br>
+                                <input type="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" class="theinput" required>
+                                <br><br><br>
+                                <button onclick="return check();" type="submit">Sign In</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+<script>
+
+    function check(){
+        var text = document.getElementById("emailorun").value;
+        var flag = 0;
+        for(var i=0; i<text.length; ++i){
+
+            if(text.charAt(i)=='@')
+                flag=1;
+        }
+        
+        if(flag==1)
+            return true;
+        
+        else {
+            alert("Please Enter a valid username or email id")
+            return false;
+        }
+    }
+
+</script>
+</body>
+</html>
